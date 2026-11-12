@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightwave Art Shop | Pocket màu chiết, bộ màu Holbein, Sakura, Phoenix</title>
+  <meta name="description" content="Lightwave Art Shop chiết màu nước Holbein và Phoenix vào hộp nhỏ gọn, bán bộ màu nguyên hãng và combo giấy, cọ. Giao hàng toàn quốc từ TP.HCM.">
+  <meta name="theme-color" content="#930500">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lightwave Art Shop | Pocket màu chiết, bộ màu Holbein, Sakura, Phoenix">
+  <meta property="og:description" content="Lightwave Art Shop chiết màu nước Holbein và Phoenix vào hộp nhỏ gọn, bán bộ màu nguyên hãng và combo giấy, cọ. Giao hàng toàn quốc từ TP.HCM.">
+  <meta property="og:locale" content="vi_VN">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 4c-2 6-6 12-11 18M20 4c1 7 4 13 10 17' fill='none' stroke='%235E7A2E' stroke-width='2.6' stroke-linecap='round'/%3E%3Ccircle cx='10' cy='27' r='8' fill='%23930500'/%3E%3Ccircle cx='29' cy='26' r='8' fill='%23930500'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Playfair Display (tiêu đề) + Be Vietnam Pro (nội dung), đều hỗ trợ tiếng Việt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <!-- Font Awesome cho icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <!-- Nạp sớm để áp dụng Dark/Light mode trước khi trang hiển thị (tránh nháy màu) -->
+  <script src="script.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Bỏ qua, tới nội dung chính</a>
+
+  <!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Lightwave Art Shop, về trang chủ">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path class="stem" d="M20 4c-2 6-6 12-11 18M20 4c1 7 4 13 10 17" />
+          <path class="leaf" d="M20 4c4-1.5 8-.5 10.5 2.5-4 1.5-8 .5-10.5-2.5z" />
+          <circle class="cherry" cx="10" cy="27" r="8" />
+          <circle class="cherry" cx="29" cy="26" r="8" />
+          <ellipse class="shine" cx="7.4" cy="24" rx="2.1" ry="1.3" />
+          <ellipse class="shine" cx="26.4" cy="23" rx="2.1" ry="1.3" />
+        </svg>
+        <span class="logo-text">Lightwave<small>Art Shop</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li><a class="nav-link" data-page="home" href="index.html">Trang chủ</a></li>
+          <li class="has-sub">
+            <a class="nav-link" data-page="danh-muc" href="danh-muc.html">Danh mục</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="brandMenu" aria-label="Xem danh mục theo hãng màu">
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <ul class="sub-menu" id="brandMenu">
+              <li><a class="sub-link" href="danh-muc.html#holbein"><span class="brand-dot" style="--c:#C4161C"></span>Màu Holbein</a></li>
+              <li><a class="sub-link" href="danh-muc.html#sakura"><span class="brand-dot" style="--c:#2B8FD6"></span>Màu Sakura</a></li>
+              <li><a class="sub-link" href="danh-muc.html#phoenix"><span class="brand-dot" style="--c:#E8742C"></span>Màu Phoenix</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" data-page="cua-hang" href="cua-hang.html">Cửa hàng</a></li>
+          <li><a class="nav-link" data-page="danh-gia" href="danh-gia.html">Đánh giá</a></li>
+          <li><a class="nav-link" data-nav="contact" href="#contact">Liên hệ</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta-mobile" href="cua-hang.html">Mua ngay</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Chuyển sang giao diện tối">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" type="button" aria-label="Mở giỏ hàng, đang có 0 sản phẩm">
+          <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+          <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+        </button>
+        <a class="btn btn-primary header-cta" href="cua-hang.html">Mua ngay</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mainNav">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-note">Chiết tay tại Sài Gòn, giao hàng toàn quốc</p>
+          <h1 id="heroTitle">Cả hộp màu chuyên nghiệp, gói gọn trong lòng bàn tay.</h1>
+          <p class="hero-lead">
+            Lightwave chiết màu nước Holbein và Phoenix ra từng hộp nhỏ, để bạn có đủ bảng màu mà không phải mua nguyên tuýp.
+            Shop cũng có bộ màu nguyên hãng và combo giấy, cọ để bắt đầu vẽ ngay.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="cua-hang.html">Vào cửa hàng</a>
+            <a class="btn btn-ghost btn-lg" href="danh-muc.html">Xem theo hãng màu</a>
+          </div>
+          <ul class="hero-facts">
+            <li><strong>Từ 80.000đ</strong> mỗi hộp màu</li>
+            <li><strong>12 đến 54 màu</strong> mỗi hộp</li>
+            <li><strong>Ảnh chụp</strong> hàng thật</li>
+          </ul>
+        </div>
+
+        <!-- Minh hoạ: hộp màu trên đĩa sứ, nền khăn caro (vẽ bằng CSS + SVG) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="gingham"></div>
+          <div class="plate"></div>
+          <div class="tin hero-tin">
+            <span class="pan" style="--c:#C4161C;--i:0"></span>
+            <span class="pan" style="--c:#E8452C;--i:1"></span>
+            <span class="pan" style="--c:#F2B630;--i:2"></span>
+            <span class="pan" style="--c:#F7DC6F;--i:3"></span>
+            <span class="pan" style="--c:#8DB255;--i:4"></span>
+            <span class="pan" style="--c:#3F7A4A;--i:5"></span>
+            <span class="pan" style="--c:#95BBEA;--i:6"></span>
+            <span class="pan" style="--c:#2E5AAC;--i:7"></span>
+            <span class="pan" style="--c:#1F2F6B;--i:8"></span>
+            <span class="pan" style="--c:#B3477D;--i:9"></span>
+            <span class="pan" style="--c:#8A5A3B;--i:10"></span>
+            <span class="pan" style="--c:#3A2A2A;--i:11"></span>
+          </div>
+          <svg class="hero-cherries" viewBox="0 0 120 120">
+            <path class="stem" d="M64 8c-6 18-20 40-38 62M64 8c4 22 14 42 30 56" />
+            <path class="leaf" d="M64 8c12-6 26-4 34 6-12 6-26 4-34-6z" />
+            <circle class="cherry" cx="28" cy="84" r="22" />
+            <circle class="cherry" cx="92" cy="80" r="22" />
+            <ellipse class="shine" cx="20" cy="75" rx="6" ry="3.6" />
+            <ellipse class="shine" cx="84" cy="71" rx="6" ry="3.6" />
+          </svg>
+          <div class="swatch-chip chip-a">
+            <span class="chip-dot" style="--c:#C4161C"></span>
+            <span class="chip-code">Holbein</span>
+            <span class="chip-name">HWC 18 màu</span>
+          </div>
+          <div class="swatch-chip chip-b">
+            <span class="chip-dot" style="--c:#2E5AAC"></span>
+            <span class="chip-code">Phoenix</span>
+            <span class="chip-name">Artist 8ml</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ẢNH TOÀN CẢNH GÓC HỌA CỤ -->
+    <section class="section showcase" id="goc-hoa-cu" aria-labelledby="showcaseTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="showcaseTitle">Toàn bộ góc họa cụ</h2>
+          <p>Ảnh chụp thật góc làm việc của Lightwave: hộp màu chiết, màu tuýp Holbein, Sakura, Phoenix, gouache HIMI cùng giấy và cọ. Bấm vào ảnh để xem lớn.</p>
+        </div>
+        <div class="showcase-grid">
+          <button class="zoom-btn showcase-main" type="button" data-zoom="images/toan-bo-hoa-cu-1.jpg" data-alt="Toàn bộ họa cụ của Lightwave bày trên bàn: hộp màu chiết, màu tuýp, bút chì màu, sổ và sách vẽ">
+            <img class="photo" src="images/toan-bo-hoa-cu-1.jpg" alt="Toàn bộ họa cụ của Lightwave bày trên bàn: hộp màu chiết, màu tuýp, bút chì màu, sổ và sách vẽ" loading="lazy">
+            <span class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Xem ảnh lớn</span>
+          </button>
+          <button class="zoom-btn showcase-side" type="button" data-zoom="images/toan-bo-hoa-cu-2.jpg" data-alt="Cận cảnh hộp gouache HIMI tím, hộp màu hồng, màu tuýp Phoenix, Holbein và Sakura">
+            <img class="photo" src="images/toan-bo-hoa-cu-2.jpg" alt="Cận cảnh hộp gouache HIMI tím, hộp màu hồng, màu tuýp Phoenix, Holbein và Sakura" loading="lazy">
+            <span class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Xem ảnh lớn</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SẢN PHẨM NỔI BẬT -->
+    <section class="section featured" aria-labelledby="featuredTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="featuredTitle">Sản phẩm nổi bật</h2>
+          <p>Bấm vào sản phẩm để xem thêm ảnh và thông tin chi tiết, hoặc bấm dấu cộng để thêm nhanh vào giỏ.</p>
+        </div>
+        <div class="product-grid" data-featured="p24,p54,p30-pink,combo-giay-co"></div>
+        <div class="section-foot">
+          <a class="btn btn-ghost btn-lg" href="cua-hang.html">Xem tất cả <span data-stat="count"></span> sản phẩm</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- THỐNG KÊ + ĐÁNH GIÁ -->
+    <section class="section reviews" aria-labelledby="reviewsTitle">
+      <div class="container">
+        <dl class="stats">
+          <div class="stat"><dt>Sản phẩm đang bán</dt><dd data-stat="count">9</dd></div>
+          <div class="stat"><dt>Giá chỉ từ</dt><dd data-stat="min-price">80.000đ</dd></div>
+          <div class="stat"><dt>Hãng màu: Holbein, Sakura, Phoenix</dt><dd>3</dd></div>
+          <div class="stat"><dt>Điểm đánh giá trung bình</dt><dd data-stat="rating">–</dd></div>
+        </dl>
+
+        <div class="section-head">
+          <h2 id="reviewsTitle">Khách hàng nói gì</h2>
+          <p>Những đánh giá mới nhất từ người đã mua họa cụ ở Lightwave.</p>
+        </div>
+        <div class="review-list review-list--home" id="homeReviews"></div>
+        <div class="section-foot">
+          <a class="btn btn-ghost btn-lg" href="danh-gia.html">Xem tất cả đánh giá</a>
+          <a class="btn btn-primary btn-lg" href="danh-gia.html#viet-danh-gia">Viết đánh giá</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->
+  <footer class="site-footer" id="contact" aria-labelledby="newsletterTitle">
+    <div class="container">
+      <div class="newsletter">
+        <div class="newsletter-copy">
+          <h2 id="newsletterTitle">Nhận thư màu mới mỗi tháng</h2>
+          <p>Một email vào đầu tháng: hộp màu vừa chiết xong, bộ màu mới về và ưu đãi cho người đăng ký. Huỷ bất cứ lúc nào.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <label class="sr-only" for="newsletterEmail">Email của bạn</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="ten.ban@gmail.com" autocomplete="email" required aria-describedby="newsletterMsg">
+          <button class="btn btn-sky" type="submit">Đăng ký</button>
+          <p class="form-msg" id="newsletterMsg" role="status"></p>
+        </form>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo logo--light" href="index.html" aria-label="Lightwave Art Shop, về trang chủ">
+            <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path class="stem" d="M20 4c-2 6-6 12-11 18M20 4c1 7 4 13 10 17" />
+          <path class="leaf" d="M20 4c4-1.5 8-.5 10.5 2.5-4 1.5-8 .5-10.5-2.5z" />
+          <circle class="cherry" cx="10" cy="27" r="8" />
+          <circle class="cherry" cx="29" cy="26" r="8" />
+          <ellipse class="shine" cx="7.4" cy="24" rx="2.1" ry="1.3" />
+          <ellipse class="shine" cx="26.4" cy="23" rx="2.1" ry="1.3" />
+        </svg>
+            <span class="logo-text">Lightwave<small>Art Shop</small></span>
+          </a>
+          <p>Họa cụ nhỏ gọn cho người thích vẽ ở bất cứ đâu. Chiết tay và đóng gói tại TP.HCM.</p>
+          <ul class="socials" aria-label="Mạng xã hội">
+            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
+            <li><a href="https://zalo.me/0773076302" aria-label="Zalo" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer-col" aria-label="Liên kết nhanh">
+          <h3>Các trang</h3>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="danh-muc.html">Danh mục</a></li>
+            <li><a href="cua-hang.html">Cửa hàng</a></li>
+            <li><a href="danh-gia.html">Đánh giá</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Sản phẩm</h3>
+          <ul>
+            <li><a href="cua-hang.html#pocket">Pocket màu chiết</a></li>
+            <li><a href="cua-hang.html#set">Bộ màu nguyên hãng</a></li>
+            <li><a href="cua-hang.html#paper">Giấy và cọ</a></li>
+            <li><a href="danh-muc.html#holbein">Màu Holbein</a></li>
+            <li><a href="danh-muc.html#sakura">Màu Sakura</a></li>
+            <li><a href="danh-muc.html#phoenix">Màu Phoenix</a></li>
+          </ul>
+        </div>
+
+        <address class="footer-col">
+          <h3>Liên hệ</h3>
+          <ul>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> TP. Hồ Chí Minh</li>
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:0773076302">0773 076 302</a></li>
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:nthaozy126@gmail.com">nthaozy126@gmail.com</a></li>
+            <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Trả lời tin nhắn 9h–21h mỗi ngày</li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Lightwave Art Shop. Mọi quyền được bảo lưu.</p>
+        <a href="#main" class="back-top">Lên đầu trang <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL dùng chung (chi tiết sản phẩm, giỏ hàng, xem ảnh lớn) ============ -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close icon-btn" type="button" aria-label="Đóng" data-close-modal>
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Thông báo nhỏ (toast) -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -255,10 +255,15 @@ function initHeader() {
    5. SMOOTH SCROLL cho link trỏ tới một vùng trong CÙNG trang
    (link sang trang khác thì để trình duyệt chuyển trang bình thường)
    -------------------------------------------------------------------------- */
-function scrollToSection(target) {
+/** Vị trí cần cuộn tới: chừa chỗ cho header dính (và thanh chọn hãng ở trang Danh mục, qua scroll-margin-top) */
+function sectionTop(target) {
   const headerH = $("#siteHeader").offsetHeight;
-  const top = target.getBoundingClientRect().top + window.scrollY - headerH + 1;
-  window.scrollTo({ top: Math.max(0, top), behavior: prefersReducedMotion() ? "auto" : "smooth" });
+  const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+  return Math.max(0, target.getBoundingClientRect().top + window.scrollY - Math.max(headerH, margin) + 1);
+}
+
+function scrollToSection(target, instant = false) {
+  window.scrollTo({ top: sectionTop(target), behavior: instant || prefersReducedMotion() ? "auto" : "smooth" });
 }
 
 function initSmoothScroll(closeMenu) {
@@ -284,7 +289,7 @@ function initSmoothScroll(closeMenu) {
   // Mở trang kèm #vùng từ trang khác: chỉnh lại vị trí cho không bị header che
   window.addEventListener("load", () => {
     const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
-    if (target) setTimeout(() => window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - $("#siteHeader").offsetHeight + 1 }), 0);
+    if (target) setTimeout(() => scrollToSection(target, true), 0);
   });
 }
 
